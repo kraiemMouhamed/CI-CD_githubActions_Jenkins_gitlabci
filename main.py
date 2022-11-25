@@ -13,7 +13,7 @@ def getInfo (): # Function to get the info
     headers = {
         'Accepts': 'application/json',
         'X-CMC_PRO_API_KEY': '$SecretKey'
-    } # Replace 'YOUR_API_KEY' with the API key you have recieved in the previous step
+    } # SecretKey added in github secret namespaces
 
     session = Session()
     session.headers.update(headers)
