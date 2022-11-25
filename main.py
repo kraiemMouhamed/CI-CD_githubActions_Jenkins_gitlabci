@@ -12,7 +12,7 @@ def getInfo (): # Function to get the info
 
     headers = {
         'Accepts': 'application/json',
-        'X-CMC_PRO_API_KEY': '08234197-0db2-4edf-8ef1-412cc0075c1f'
+        'X-CMC_PRO_API_KEY': '$SecretKey'
     } # Replace 'YOUR_API_KEY' with the API key you have recieved in the previous step
 
     session = Session()
