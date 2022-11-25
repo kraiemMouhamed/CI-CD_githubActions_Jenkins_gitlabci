@@ -14,9 +14,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+
+    - name: Log in to Docker Hub
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        with:
+          username: "KraiemBechir"
+          password: ${{ secrets.DOCKER_PASSWORD }}
+        
     - name: Build & Push Docker Image
       run: |
-        echo "${{ secrets.DOCKERPW }}" | docker login -u "KraiemBechir" --password-stdin
         docker image build -t kraiembechir/DockerGithubActions:latest .  
         docker push kraiembechir/DockerGithubActions:latest
       # add DOCKERPW to Github actions secret
+      # echo "${{ secrets.DOCKERPW }}" | docker login -u "KraiemBechir" --password-stdin
