@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     environment {
       DOCKERHUB_CREDENTIALS=credentials('docker-hub')
       DOCKER_TAG = getVersion()
@@ -9,7 +9,7 @@ pipeline {
     // We add all credentials to the jenkins server
     // Jenkins service needs to be able to execute docker commands
     stages{
-        stage('Checkout gitlab repository'){
+        stage('Checkout github repository'){
             steps{
                 git branch: 'main', 
                 url: 'https://github.com/kraiemMouhamed/CI-CD_githubActions_Jenkins_gitlabci.git'
