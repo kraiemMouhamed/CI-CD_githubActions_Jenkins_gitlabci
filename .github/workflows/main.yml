@@ -16,5 +16,6 @@ jobs:
     - name: Build & Push Docker Image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "kraiembechir" --password-stdin
-        docker image build -t kraiembechir/DockerGithubActions:latest .
+        docker image build -t kraiembechir/DockerGithubActions:latest .  
         docker push kraiembechir/DockerGithubActions:latest
+      # add DOCKERPW to Github actions secret
