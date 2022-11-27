@@ -18,7 +18,7 @@ pipeline {
         
         stage('Docker Build'){
             steps{
-                sh "docker build . -t kraiemkraiem/dockerJenkins:${DOCKER_TAG} "
+                sh "docker build . -t kraiembechir/dockerJenkins:${DOCKER_TAG} "
             }
         }
         stage('DockerHub Push'){
