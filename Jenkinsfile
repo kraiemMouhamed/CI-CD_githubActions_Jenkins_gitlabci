@@ -24,7 +24,7 @@ pipeline {
         stage('DockerHub Push'){
             steps{
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-                sh "docker push kraiemkraiem/dockerJenkins:${DOCKER_TAG} "
+                sh "docker push kraiembechir/dockerJenkins:${DOCKER_TAG} "
                 
             }
         }
